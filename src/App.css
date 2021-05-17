@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+.header {
+  display: flex;
+  background-color: rgb(228, 178, 17);
 }
-
-.App-logo {
-  height: 40vmin;
+.header img {
+  height: 5vmin;
+  width: 5vmin;
   pointer-events: none;
+  border-radius: 50%;
+  margin: 0 10px;
+  margin-top: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .header img {
+    animation: img-spin infinite 20s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes img-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.main_note {
+  width: 500px;
+  height: 220px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0px 1px 10px 1px;
+  margin-top: 20px;
+  display: flex;
+  border-radius: 10px;
+}
+.main_note input {
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  float: left;
+  margin: 5px;
+  font-family: fantasy;
+}
+.main_note textarea {
+  border: none;
+  font-size: 16px;
+}
+.main_note input:focus {
+  outline: none;
+}
+.main_note textarea:focus {
+  outline: none;
+}
+
+.main_note button {
+  color: rgb(228, 178, 17);
+  box-shadow: 1px 1px 10px 0px black;
+  border-radius: 50%;
+  margin-top: 50px;
+  z-index: 10;
+  background-color: rgb(255, 255, 255);
+}
+.main_note button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(228, 178, 17);
+}
+
+.MuiButton-root {
+  min-width: 0px !important;
+  width: 45px;
+}
+
+.note {
+  min-width: 200px;
+  min-height: 120px;
+  margin: 30px;
+  background-color: blanchedalmond;
+  padding: 5px;
+  box-shadow: 1px 1px 5px 1px;
+  margin-top: 30px;
+  overflow-y: auto;
+}
+.note h1 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 15px;
+}
+.note button {
+  float: right;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.deleteicon {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 2px;
+}
+.deleteicon:hover {
+  color: red;
+}
+.noteadded {
+  display: flex;
+  flex-wrap: wrap;
 }
